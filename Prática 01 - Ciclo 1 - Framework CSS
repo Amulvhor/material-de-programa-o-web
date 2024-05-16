@@ -1,0 +1,36 @@
+* Curso de Engenharia de Software - UniEVANGÉLICA 
+* Disciplina de Programação Web 
+* Dev: João Lucas Maciel Martins 
+* DATA: 16/05/2024<!DOCTYPE html>
+<html>
+<head>
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário de Contato</h2>
+        <form>
+            <!-- Campo do nome -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" name="nome">
+            </div>
+            <!-- Campo do email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email">
+            </div>
+            <!-- Campo da mensagem -->
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" placeholder="Digite sua mensagem" name="mensagem"></textarea>
+            </div>
+            <!-- Botão de envio -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
