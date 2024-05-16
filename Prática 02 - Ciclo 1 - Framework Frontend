@@ -1,0 +1,45 @@
+<template>
+  <div>
+    <input v-model="novaTarefa" placeholder="Adicionar nova tarefa" />
+    <button @click="adicionarTarefa">Adicionar</button>
+    <ul>
+      <li v-for="(tarefa, index) in tarefas" :key="index">
+        <span :class="{ concluida: tarefa.concluida }">{{ tarefa.nome }}</span>
+        <button @click="marcarComoConcluida(index)">Marcar como concluída</button>
+        <button @click="removerTarefa(index)">Remover</button>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      novaTarefa: '',
+      tarefas: []
+    }
+  },
+  methods: {
+    adicionarTarefa() {
+      // Adiciona uma nova tarefa à lista
+      this.tarefas.push({ nome: this.novaTarefa, concluida: false });
+      this.novaTarefa = '';
+    },
+    marcarComoConcluida(index) {
+      // Marca a tarefa como concluída
+      this.tarefas[index].concluida = true;
+    },
+    removerTarefa(index) {
+      // Remove a tarefa da lista
+      this.tarefas.splice(index, 1);
+    }
+  }
+}
+</script>
+
+<style scoped>
+.concluida {
+  text-decoration: line-through;
+}
+</style>
